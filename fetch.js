@@ -1,7 +1,6 @@
 async function loadUser(username) {
     try {
         const url = `https://api.github.com/users/${username}`
-        fetch(url)
         const response = await fetch(url)
         const data = await response.json()
         
@@ -13,6 +12,4 @@ async function loadUser(username) {
     catch(err) {
         console.log(err)
     }
-}
-
-loadUser("Kapoor-Divye")
+};
