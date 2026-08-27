@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Demo</title>
+    <script>
+       async function getProducts(){
+        const URL = "https://dummyjson.com/products?limit=10&skip=5";
+        try{
+            const res = await fetch(URL);
+            console.log("Response:", res);
+            const data = await res.json();
+            console.log("Data:", data.products);
+        }
+        catch(err){
+            console.log("Error:", err);
+        }
+    }
+    getProducts();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
