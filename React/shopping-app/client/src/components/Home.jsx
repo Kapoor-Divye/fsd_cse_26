@@ -1,5 +1,6 @@
 import Items from "./Items"
 
+
 const Home = () => {
   const Itemdata=[
     {Image:"",title:"ReactJS", price: 465},
