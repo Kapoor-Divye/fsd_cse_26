@@ -4,7 +4,7 @@ body{
 .header{
     width: 100vw;
     height: 10vh;
-    background-color: purple;
+    background-color: red;
     color:white;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@ body{
 .navbar{
     width: 100vw;
     height: 4vh;
-    background-color: yellow;
+    background-color: black;
     font-size: 24px;
     display: flex;
     justify-content: space-evenly;
@@ -22,12 +22,12 @@ body{
 }   
 
 .navbar a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 .navbar a:hover {
-    background-color: black;
+    background-color: red;
     color: white;
 }
 
@@ -45,7 +45,7 @@ body{
 .footer{
     width: 100vw;
     height: 6vh;
-    background-color: purple;
+    background-color: red;
     color:white;
     display: flex;
     align-items: center;
