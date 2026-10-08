@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Stopwatch.css';
 
 function Stopwatch() {
@@ -8,11 +8,10 @@ function Stopwatch() {
   useEffect(() => {
     let intervalId;
 
-    if (isRunning) {
-      intervalId = setInterval(() => {
-        setTime((prevTime) => prevTime + 10);
-      }, 10);
-    }
+    if (!isRunning) return;
+    intervalId = setInterval(() => {
+      setTime((prevTime) => prevTime + 10);
+    }, 10);
 
     return () => clearInterval(intervalId);
   }, [isRunning]);
@@ -28,8 +27,8 @@ function Stopwatch() {
 
   const formatTime = () => {
     const minutes = Math.floor((time / 60000) % 60);
-    const seconds = Math.floor((time / 1000) % 60);
-    const milliseconds = Math.floor((time % 1000) / 10);
+    const seconds = Math.floor((time / 10000) % 60);
+    const milliseconds = Math.floor((time % 10000) / 10);
 
     const pad = (num) => String(num).padStart(2, '0');
 
