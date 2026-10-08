@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { Home, Counter, Stopwatch } from "./components/index"
+import { Home, Counter, Stopwatch, Login } from "./components/index"
 
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
             <Route path="/counter" element={<Counter />} />
             <Route path="/stopwatch" element={<Stopwatch />} />
             <Route path="/store" element={<h1>Store</h1>} />
+            <Route path="/login" element={<Login />} />
             <Route path="*" element={<h1>Error 404: Page Not Found</h1>} />
           </Route>
         </Routes>
